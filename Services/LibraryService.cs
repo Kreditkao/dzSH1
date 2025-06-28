@@ -57,7 +57,8 @@ public class LibraryService
         }
         finally
         {
-            if (lockTaken) Monitor.Exit(_monitorLock);
+            if (lockTaken)
+                Monitor.Exit(_monitorLock); 
             _semaphore.Release();
         }
     }
